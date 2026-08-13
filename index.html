@@ -117,6 +117,23 @@ fetch('https://api.ipify.org?format=json')
     }
   });
 </script>
+<script>
+  const secretCode = "evenworse";
+  
+  let typedKeys = "";
+
+  window.addEventListener("keydown", function(e) {
+    typedKeys += e.key.toLowerCase();
+
+    if (typedKeys.length > secretCode.length) {
+      typedKeys = typedKeys.slice(-secretCode.length);
+    }
+
+    if (typedKeys === secretCode) {
+      window.location.href = "phi";
+    }
+  });
+</script>
 
     <div class="topbar">
         <a href="index.html"><img src="logo.png" alt="entityarchive"></a>
